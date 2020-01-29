@@ -1,6 +1,10 @@
 import React from 'react';
+import WeatherCard from './WeatherCard.js';
+
 import logo from './logo.svg';
 import './App.css';
+import {Button, Jumbotron} from 'react-bootstrap'; 
+
 const API_KEY = "8e520974bcb3c5c57b2b1233edd5b9db"
 
 class App extends React.Component  {
@@ -32,11 +36,15 @@ class App extends React.Component  {
   render(){
     return (
       <div className="App">
-        <div className='Weather'>
-          <h3>{this.state.city}</h3>
-          <div>{this.state.date}</div><br></br>
-          <div>Sunrise: <strong>{this.state.sunrise}</strong></div>
-          <div>Sunset: <strong>{this.state.sunset}</strong></div><br></br>
+        <div>Today, {this.state.date}</div>
+        <br></br>
+        <div className='row'>
+          <div className="col-6">
+            <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
+          </div>
+          <div className="col-6">
+            <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
+          </div>
         </div>
       </div>
     )
