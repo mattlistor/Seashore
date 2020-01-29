@@ -1,9 +1,7 @@
 import React from 'react';
 import WeatherCard from './WeatherCard.js';
-
 import logo from './logo.svg';
 import './App.css';
-import {Button, Jumbotron} from 'react-bootstrap'; 
 
 const API_KEY = "8e520974bcb3c5c57b2b1233edd5b9db"
 
@@ -11,10 +9,11 @@ class App extends React.Component  {
   state = {
     city: "",
     country: "",
+    date: "",
   }
 
   componentDidMount = () => {
-    const city = "sea bright"
+    const city = "tampa"
     const country = "us"
 
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=imperial`)
@@ -35,17 +34,21 @@ class App extends React.Component  {
   
   render(){
     return (
-      <div className="App">
-        <div>Today, {this.state.date}</div>
-        <br></br>
-        <div className='row'>
-          <div className="col-6">
-            <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
+      <div className='App'>
+        {/* <div className='bigType'><strong>Sea Shore</strong></div> */}
+
+        <div className='Header'>Sea Shore</div>
+
+        <div className='Main'>
+          <div>Today, {this.state.date}:</div>
+            <br></br>
+            <div class="WeatherCardContainer flex-container wrap">
+              <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
+              <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
+              <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
+              <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
+            </div>
           </div>
-          <div className="col-6">
-            <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
-          </div>
-        </div>
       </div>
     )
   }
