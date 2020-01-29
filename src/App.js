@@ -13,7 +13,7 @@ class App extends React.Component  {
   }
 
   componentDidMount = () => {
-    const city = "tampa"
+    const city = "Sea Bright"
     const country = "us"
 
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=imperial`)
@@ -35,20 +35,21 @@ class App extends React.Component  {
   render(){
     return (
       <div className='App'>
-        {/* <div className='bigType'><strong>Sea Shore</strong></div> */}
-
-        <div className='Header'>Sea Shore</div>
+        <div className='SeaShore'><span className='sea'>S E A</span> <span className='shore'>S H O R E</span></div>
 
         <div className='Main'>
-          <div>Today, {this.state.date}:</div>
-            <br></br>
-            <div class="WeatherCardContainer flex-container wrap">
-              <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
-              <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
-              <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
-              <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
-            </div>
+          <div className='Date'>
+            Today,<br></br>
+            {this.state.date}
           </div>
+
+          <div class="WeatherCardContainer flex-container wrap">
+            <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
+            <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
+            <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
+            <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
+          </div>
+        </div>
       </div>
     )
   }
