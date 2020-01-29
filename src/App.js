@@ -39,17 +39,20 @@ class App extends React.Component  {
 
         <div className='Main'>
           <div className='Date'>
-            Today,<br></br>
+            Today,
             {this.state.date}
           </div>
 
           <div class="WeatherCardContainer flex-container wrap">
-            <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
-            <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
-            <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
-            <WeatherCard city={this.state.city} sunrise={this.state.sunrise} sunset={this.state.sunset} date={this.state.date}/>
+            <WeatherCard city={"Freehold"}/>
+            <WeatherCard city={"Long Branch"}/>
+            <WeatherCard city={"Sea Bright"}/>
+            <WeatherCard city={"Denver"}/>
           </div>
         </div>
+
+        {/* <div className='Footer'><span className='sea'>{this.state.date}</span></div> */}
+
       </div>
     )
   }

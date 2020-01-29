@@ -18,11 +18,11 @@ h3 {
   min-width: 97vw; */
   display: flex; 
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
-.bigType {
+/* .bigType {
   position: fixed;
   top: 10px;
   left: 10px;
@@ -31,11 +31,6 @@ h3 {
   z-index: -1;
   color: rgba(255, 255, 255, 0.2);
   line-height: 1;
-}
-
-/* .Sidebar {
-  background-color:rgb(100, 100, 100, 0.1);
-  width: 20%;
 } */
 
 .SeaShore {
@@ -50,39 +45,53 @@ h3 {
   margin: 0px 10px 0px 10px;
 }
 
+.Footer {
+  background-color:rgba(255, 255, 255, 0.3);
+  color: #85705F;
+  /* position: fixed; */
+  bottom: 0px;
+  font-size: 10px;
+  /* margin: 10px; */
+  text-align: center;
+}
+
 .Main {
-  margin: 100px 10px 10px 10px;
+  margin: 50px 10px 10px 10px;
   display: flex; 
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .Date {
   /* color: #85705F; */
   color: rgb(130, 147, 150);
-  margin: 10px;
+  color: white;
+  margin: 30px;
+  margin-top: 0;
   font-size: 30px;
-  width: 200px;
-
+  /* width: 200px; */
 }
 
 .WeatherCardContainer {
   display: flex; 
-  justify-content: flex-start;
+  justify-content: center;
   margin: 10px;
   width: 100%;
 }
 
 .WeatherCard {
+  /* font-family: 'Open Sans', sans-serif; */
   color: rgb(89, 89, 89);
   background-color:rgba(255, 255, 255, 0.87);
   padding: 20px;
-  margin: 0px 10px 10px 10px;
+  margin: 12px;
   font-size:10px;
   height: 200px;
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(92, 61, 61, 0.3);
+  width: 140px;
+  /* z-index: 999; */
 } 
 
 .flex-container {
