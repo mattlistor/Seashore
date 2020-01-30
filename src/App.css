@@ -1,5 +1,6 @@
 body {
-  background-image: url("https://i.imgur.com/1fHklZ7.jpg");
+  /* background-image: url("https://i.imgur.com/1fHklZ7.jpg"); */
+  /* background-image: url('./background.jpg'); */
   background-color:rgb(222, 222, 222);
   background-position: center;
   background-repeat: no-repeat;
@@ -8,6 +9,15 @@ body {
   margin: 0;
   min-height: 100vh;
 }
+
+.welcomeVideo {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+  background: url("https://media.istockphoto.com/videos/guys-sitting-on-couch-playing-video-games-video-id473174500") no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+ }
 
 .overlay {
   position: fixed; 
@@ -18,12 +28,12 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
   z-index: -1; 
 }
 
 h3 {
-  margin-top:0;
+  margin-top:20px;
   font-size:26px;
 }
 
@@ -37,7 +47,8 @@ h3 {
 .SeaShore {
   color: #85705F;
   font-size: 17px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  margin-top: 50px;
   text-align: center;
   border-bottom: 0.2px solid;
   width: 70%;
@@ -83,7 +94,7 @@ h3 {
   /* font-family: 'Open Sans', sans-serif; */
   color: rgb(89, 89, 89);
   background-color:rgba(255, 255, 255, 0.93);
-  padding: 20px;
+  padding: 40px;
   margin: 12px;
   font-size:18px;
   /* height: 270px; */
@@ -110,11 +121,10 @@ h3 {
 
 .Sky {
   background-color:rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 5px 10px 5px 10px;
+  border-radius: 15px;
+  padding: 5px 15px 5px 15px;
   margin-top: 20px;
-  box-shadow: 0px 0px 20px rgba(130, 130, 130, 0.3);
-
+  border: 1px solid #85705F ;
 }
 
 .Sunrise, .Sunset, .Wind, .Temp {

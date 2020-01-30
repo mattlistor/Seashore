@@ -4,6 +4,10 @@ import icon1 from './icons/icon-01.png';
 import icon2 from './icons/icon-02.png';
 import icon3 from './icons/icon-03.png';
 import icon4 from './icons/icon-04.png';
+import icon5 from './icons/icon-05.png';
+import icon6 from './icons/icon-06.png';
+import icon7 from './icons/icon-07.png';
+import icon8 from './icons/icon-08.png';
 
 const API_KEY = "8e520974bcb3c5c57b2b1233edd5b9db"
 
@@ -27,7 +31,7 @@ class WeatherCard extends React.Component  {
         this.setState({ 
             sunrise: sunrise.toLocaleTimeString().toLowerCase(),
             sunset: sunset.toLocaleTimeString().toLowerCase(),
-            weather: myJson.weather[0].description,
+            weather: myJson.weather[0].description.toLowerCase(),
             // weather: myJson.coord.lon + ", " + myJson.coord.lat,
             wind: myJson.wind.speed + " mph",
             temp: myJson.main.temp + "° F"
@@ -82,11 +86,11 @@ class WeatherCard extends React.Component  {
                         <img className="Icon" src={icon4}></img>
                         <div>{this.state.temp}</div>
                     </div>
-
+{/* 
                     <div className='Temp'>
                         <img className="Icon" src={icon4}></img>
                         <div>{this.state.temp}</div>
-                    </div>
+                    </div> */}
                 </div>
                 
             </>

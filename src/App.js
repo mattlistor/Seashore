@@ -12,14 +12,17 @@ class App extends React.Component  {
   
   render(){
     return (
+      <>
+      {/* <video autoPlay muted loop className="welcomeVideo" src="https://media.istockphoto.com/videos/sunny-sparkles-on-surface-of-water-video-id1132290833" type="video/mp4" /> */}
+
       <div className='App'>
         <div className="overlay"></div>
-        <div className='SeaShore'><span className='sea'>S E A</span> <span className='shore'>S H O R E</span></div>
+        <div className='SeaShore'><span className='sea'>S E A</span> <span className='shore'>S H O R E</span> </div>
 
         <div className='Main'>
-          {/* <div className='Date'>
+          <div className='Date'>
             {this.state.date}
-          </div> */}
+          </div>
 
           <div className="WeatherCardContainer flex-container wrap">
             <WeatherCard city={"Sea Bright"}/>
@@ -30,9 +33,8 @@ class App extends React.Component  {
           </div>
         </div>
 
-        {/* <div className='Footer'><span className='sea'>{this.state.date}</span></div> */}
-
       </div>
+      </>
     )
   }
 }
