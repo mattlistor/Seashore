@@ -1,59 +1,48 @@
 body {
-  background-image: url("https://i.imgur.com/1fHklZ7.jpg");
+  /* background-image: url("https://i.imgur.com/1fHklZ7.jpg"); */
+  background-color:rgb(242, 242, 242);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
   font-family: 'Crimson Text', serif;
   margin: 0;
   min-height: 100vh;
-
 }
 
 h3 {
   margin-top:0;
+  font-size:26px;
+
 }
 
 .App {
-  /* min-height: 97vh;
-  min-width: 97vw; */
   display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* .bigType {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  font-size: 300px;
-  font-family: 'Ubuntu';
-  z-index: -1;
-  color: rgba(255, 255, 255, 0.2);
-  line-height: 1;
-} */
-
 .SeaShore {
   color: #85705F;
-  /* color: rgb(160, 172, 174); */
   font-size: 17px;
-  margin: 20px;
+  margin-bottom: 20px;
   text-align: center;
+  border-bottom: 0.2px solid;
+  width: 70%;
+  line-height: 50px;
 }
 
 .sea, .shore {
   margin: 0px 10px 0px 10px;
 }
 
-.Footer {
+/* .Footer {
   background-color:rgba(255, 255, 255, 0.3);
   color: #85705F;
-  /* position: fixed; */
   bottom: 0px;
   font-size: 10px;
-  /* margin: 10px; */
   text-align: center;
-}
+} */
 
 .Main {
   margin: 50px 10px 10px 10px;
@@ -64,12 +53,10 @@ h3 {
 }
 
 .Date {
-  /* color: #85705F; */
-  color: rgb(130, 147, 150);
-  color: white;
+  color: rgb(89, 89, 89);
   margin: 30px;
   margin-top: 0;
-  font-size: 30px;
+  font-size: 40px;
   /* width: 200px; */
 }
 
@@ -83,16 +70,26 @@ h3 {
 .WeatherCard {
   /* font-family: 'Open Sans', sans-serif; */
   color: rgb(89, 89, 89);
-  background-color:rgba(255, 255, 255, 0.87);
+  background-color:rgba(255, 255, 255, 0.93);
   padding: 20px;
   margin: 12px;
-  font-size:10px;
-  height: 200px;
+  font-size:18px;
+  height: 270px;
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(92, 61, 61, 0.3);
-  width: 140px;
+  width: 300px;
+  text-align: center;
   /* z-index: 999; */
 } 
+
+.City {
+  color: #85705F;
+}
+
+.Sky {
+  background-color:red;
+  width: 100%;
+}
 
 .flex-container {
   -ms-box-orient: horizontal;
@@ -103,6 +100,10 @@ h3 {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }  
+
+.Sun {
+  width: 50px;
+}
 
 
 

@@ -6,9 +6,6 @@ const API_KEY = "8e520974bcb3c5c57b2b1233edd5b9db"
 class WeatherCard extends React.Component  {
 
   state = {
-    city: "",
-    country: "",
-    date: "",
     sunrise: "",
     sunset: "",
   }
@@ -22,13 +19,11 @@ class WeatherCard extends React.Component  {
     .then((myJson) => {
         let sunrise = new Date(myJson.sys.sunrise * 1000)
         let sunset = new Date(myJson.sys.sunset * 1000)
-        let date = new Date(myJson.dt * 1000)
 
         this.setState({ 
-        city: myJson.name,
-        date: date.toDateString(),
-        sunrise: sunrise.toLocaleTimeString().toLowerCase(),
-        sunset: sunset.toLocaleTimeString().toLowerCase(),
+            sunrise: sunrise.toLocaleTimeString().toLowerCase(),
+            sunset: sunset.toLocaleTimeString().toLowerCase(),
+            weather: myJson.weather[0].main
         })
     })
   }
@@ -36,7 +31,7 @@ class WeatherCard extends React.Component  {
   render(){
     return (
       <div className="WeatherCard">
-          {this.props.city === "" ? 
+          {this.state.sunrise === "" ? 
             <>
                 <h3>{this.props.city}</h3>
                 {/* Loading graphic */}
@@ -44,9 +39,19 @@ class WeatherCard extends React.Component  {
             </>
             :
             <>
-                <h3>{this.props.city}</h3>
-                <div>Sunrise: <strong>{this.state.sunrise}</strong></div>
-                <div>Sunset: <strong>{this.state.sunset}</strong></div>
+                <h3 className="City">{this.props.city}</h3>
+
+                <div className="Sky">{this.state.weather}</div>
+
+                <div className='Sunrise'>
+                    <img className="Sun" src="https://i.imgur.com/lKsvVdJ.png"></img>
+                    <div>{this.state.sunrise}</div>
+                </div>
+
+                <div className='Sunrise'>
+                    <img className="Sun" src="https://i.imgur.com/lKsvVdJ.png"></img>
+                    <div>{this.state.sunset}</div>
+                </div>
             </>
           }
       </div>
