@@ -13,18 +13,20 @@ class App extends React.Component  {
   render(){
     return (
       <div className='App'>
+        <div className="overlay"></div>
         <div className='SeaShore'><span className='sea'>S E A</span> <span className='shore'>S H O R E</span></div>
 
         <div className='Main'>
-          <div className='Date'>
+          {/* <div className='Date'>
             {this.state.date}
-          </div>
+          </div> */}
 
           <div className="WeatherCardContainer flex-container wrap">
             <WeatherCard city={"Sea Bright"}/>
             <WeatherCard city={"Long Branch"}/>
             <WeatherCard city={"Cape May"}/>
             <WeatherCard city={"Tampa"}/>
+            <WeatherCard city={"Asbury Park"}/>
           </div>
         </div>
 

@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.css';
+import icon1 from './icons/icon-01.png';
+import icon2 from './icons/icon-02.png';
+import icon3 from './icons/icon-03.png';
+import icon4 from './icons/icon-04.png';
 
 const API_KEY = "8e520974bcb3c5c57b2b1233edd5b9db"
 
@@ -23,7 +27,10 @@ class WeatherCard extends React.Component  {
         this.setState({ 
             sunrise: sunrise.toLocaleTimeString().toLowerCase(),
             sunset: sunset.toLocaleTimeString().toLowerCase(),
-            weather: myJson.weather[0].main
+            weather: myJson.weather[0].description,
+            // weather: myJson.coord.lon + ", " + myJson.coord.lat,
+            wind: myJson.wind.speed + " mph",
+            temp: myJson.main.temp + "° F"
         })
     })
   }
@@ -42,16 +49,46 @@ class WeatherCard extends React.Component  {
                 <h3 className="City">{this.props.city}</h3>
 
                 <div className="Sky">{this.state.weather}</div>
+                
+                <div className="WeatherCardRow">
+                    <div className='Sunrise'>
+                        <img className="Icon" src={icon1}></img>
+                        <div>{this.state.sunrise}</div>
+                    </div>
 
-                <div className='Sunrise'>
-                    <img className="Sun" src="https://i.imgur.com/lKsvVdJ.png"></img>
-                    <div>{this.state.sunrise}</div>
+                    <div className='Sunset'>
+                        <img className="Icon" src={icon2}></img>
+                        <div>{this.state.sunset}</div>
+                    </div>
+{/* 
+                    <div className='Wind'>
+                        <img className="Icon" src={icon3}></img>
+                        <div>{this.state.wind}</div>
+                    </div>
+
+                    <div className='Temp'>
+                        <img className="Icon" src={icon4}></img>
+                        <div>{this.state.temp}</div>
+                    </div> */}
                 </div>
 
-                <div className='Sunrise'>
-                    <img className="Sun" src="https://i.imgur.com/lKsvVdJ.png"></img>
-                    <div>{this.state.sunset}</div>
+                <div className="WeatherCardRow">
+                    <div className='Wind'>
+                        <img className="Icon" src={icon3}></img>
+                        <div>{this.state.wind}</div>
+                    </div>
+
+                    <div className='Temp'>
+                        <img className="Icon" src={icon4}></img>
+                        <div>{this.state.temp}</div>
+                    </div>
+
+                    <div className='Temp'>
+                        <img className="Icon" src={icon4}></img>
+                        <div>{this.state.temp}</div>
+                    </div>
                 </div>
+                
             </>
           }
       </div>
