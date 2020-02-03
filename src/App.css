@@ -1,13 +1,27 @@
 body {
   /* background-image: url("https://i.imgur.com/1fHklZ7.jpg"); */
   /* background-image: url('./background.jpg'); */
-  background-color:rgb(222, 222, 222);
+  background-color:rgb(255, 255, 255);
+  /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
+  /* background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */
+  /* background-image: linear-gradient(120deg, #fdfbfb 0%, #c6d0d5 100%); */
+  /* background-image: linear-gradient(120deg, #ffffff 0%, #ffecd2 100%); */
+  background-image: linear-gradient(120deg, #ffffff 0%, #fffaf2 100%);
+
+  /* background-image: linear-gradient(120deg, rgb(255, 253, 224) 0%, rgb(255, 251, 191) 100%); */
+
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
-  font-family: 'Crimson Text', serif;
+  /* font-family: 'Crimson Text', serif; */
+  /* font-family: 'Raleway', sans-serif; */
+  /* font-family: 'Lato', sans-serif; */
+  font-family: 'Noto Sans', sans-serif;
   margin: 0;
   min-height: 100vh;
+  color: rgb(89, 89, 89);
+
 }
 
 .welcomeVideo {
@@ -45,27 +59,22 @@ h3 {
 }
 
 .SeaShore {
-  color: #85705F;
-  font-size: 17px;
+  /* color: #85705F; */
+  /* color: #FB6F39; */
+
+  font-size: 36px;
   /* margin-bottom: 20px; */
   margin-top: 50px;
   text-align: center;
-  border-bottom: 0.2px solid;
+  /* border-bottom: 0.2px solid; */
   width: 70%;
   line-height: 50px;
+  font-weight: 700;
 }
 
 .sea, .shore {
   margin: 0px 10px 0px 10px;
 }
-
-/* .Footer {
-  background-color:rgba(255, 255, 255, 0.3);
-  color: #85705F;
-  bottom: 0px;
-  font-size: 10px;
-  text-align: center;
-} */
 
 .Main {
   margin: 50px 10px 10px 10px;
@@ -91,21 +100,25 @@ h3 {
 }
 
 .WeatherCard {
-  /* font-family: 'Open Sans', sans-serif; */
-  color: rgb(89, 89, 89);
-  background-color:rgba(255, 255, 255, 0.93);
-  padding: 40px;
+  position: relative;
+  /* color: rgb(89, 89, 89); */
+  background-color: rgb(255, 233, 205);
+  /* background-color:rgba(255, 255, 255, 0.93); */
+  /* background-image: linear-gradient(120deg, #ffffff 0%, #fefaf3 100%); */
+  background-image: linear-gradient(120deg, rgb(255, 242, 225) 0%, rgb(255, 233, 205) 100%);
+  padding: 30px;
   margin: 12px;
   font-size:18px;
-  /* height: 270px; */
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px rgba(92, 61, 61, 0.3);
-  /* width: 300px; */
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(92, 61, 61, 0.) inset;
+  box-shadow: 0px 0px 20px rgba(92, 61, 61, 0.1);
+
   text-align: center;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: fadein 1s;
 } 
 
 .WeatherCardRow {
@@ -114,9 +127,24 @@ h3 {
 }
 
 .City {
-  color: #85705F;
-  margin-bottom: 10px;
-  font-size: 32px;
+  color: rgb(255, 255, 255);
+  /* color: rgb(89, 89, 89); */
+  color: #FB6F39;
+
+  margin: -20px -20px 0px -20px;
+  font-size: 30px;
+  font-weight: 700;
+  /* background-color: white; */
+  /* background-image: linear-gradient(120deg, #FEF792 0%, #EAB32A 100%); */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width:340px;
+  height: 90px;
+  display:flex;
+  flex-direction: column;
+  justify-content:  center;
+  letter-spacing: 2px
+ 
 }
 
 .Sky {
@@ -128,7 +156,14 @@ h3 {
 }
 
 .Sunrise, .Sunset, .Wind, .Temp {
-  margin: 20px 20px 20px 20px;
+  width: 130px;
+  color: rgb(89, 89, 89);
+  margin: 10px 10px 10px 10px;
+  background-color:rgb(255, 255, 255);
+  padding: 10px 25px 25px 25px;
+  box-shadow: 0px 0px 10px rgba(92, 61, 61, 0.1) inset;
+  border-radius: 30px;
+  font-size:14px;
 }
 
 .flex-container {
@@ -144,6 +179,11 @@ h3 {
 .Icon {
   /* background-color:red; */
   width: 80px;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translatey(10px); }
+  to   { opacity: 1; transform: translatey(0px); }
 }
 
 

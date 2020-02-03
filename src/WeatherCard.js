@@ -50,9 +50,9 @@ class WeatherCard extends React.Component  {
             </>
             :
             <>
-                <h3 className="City">{this.props.city}</h3>
+                <h3 className="City">{this.props.city.toString()}</h3>
 
-                <div className="Sky">{this.state.weather}</div>
+                {/* <div className="Sky">{this.state.weather}</div> */}
                 
                 <div className="WeatherCardRow">
                     <div className='Sunrise'>
@@ -64,8 +64,8 @@ class WeatherCard extends React.Component  {
                         <img className="Icon" src={icon2}></img>
                         <div>{this.state.sunset}</div>
                     </div>
-{/* 
-                    <div className='Wind'>
+
+                    {/* <div className='Wind'>
                         <img className="Icon" src={icon3}></img>
                         <div>{this.state.wind}</div>
                     </div>
@@ -86,11 +86,6 @@ class WeatherCard extends React.Component  {
                         <img className="Icon" src={icon4}></img>
                         <div>{this.state.temp}</div>
                     </div>
-{/* 
-                    <div className='Temp'>
-                        <img className="Icon" src={icon4}></img>
-                        <div>{this.state.temp}</div>
-                    </div> */}
                 </div>
                 
             </>
