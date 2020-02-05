@@ -24,15 +24,15 @@ class App extends React.Component  {
 
           <div className="WeatherCardContainer flex-container wrap">
             <WeatherCard city={"Sea Bright"}/>
-            {/* <WeatherCard city={"Long Branch"}/> */}
+            {/* <WeatherCard city={"Long Branch"}/>
             <WeatherCard city={"Cape May"}/>
             <WeatherCard city={"Tampa"}/>
-            {/* <WeatherCard city={"Asbury Park"}/> */}
+            <WeatherCard city={"Asbury Park"}/> */}
           </div>
         </div>
 
       </div>
-      
+
     )
   }
 }

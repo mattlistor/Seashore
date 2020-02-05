@@ -31,23 +31,57 @@ class WeatherCard extends React.Component  {
         this.setState({ 
             sunrise: sunrise.toLocaleTimeString().toLowerCase(),
             sunset: sunset.toLocaleTimeString().toLowerCase(),
-            weather: myJson.weather[0].description.toLowerCase(),
+            weather: myJson.weather[0].main,
             // weather: myJson.coord.lon + ", " + myJson.coord.lat,
             wind: myJson.wind.speed + " mph",
-            temp: myJson.main.temp + "° F"
+            temp: Math.trunc(myJson.main.temp) + "° F"
         })
     })
   }
   
   render(){
+
+    // https://www.engine.xyz/
+
     return (
       <div className="WeatherCard">
           {this.state.sunrise === "" ? 
+
             <>
-                <h3>{this.props.city}</h3>
-                {/* Loading graphic */}
-                <img src="https://i.imgur.com/ptdvwYH.gif" width="100px"></img>
+                <h3 className="City">{this.props.city.toString()}</h3>
+
+                {/* <div className="Sky">{this.state.weather}</div> */}
+
+                <div className="WeatherCardRow">
+                    <div className='Sunrise Tile'>
+                        <img className="Icon" src={"https://i.imgur.com/ptdvwYH.gif"}></img>
+                        <div>Loading...</div>
+                    </div>
+
+                    <div className='Sunset Tile'>
+                        <img className="Icon" src={"https://i.imgur.com/ptdvwYH.gif"}></img>
+                        <div>Loading...</div>
+                    </div>
+                </div>
+
+                <div className="WeatherCardRow">
+                    <div className='Wind Tile'>
+                        <img className="Icon" src={"https://i.imgur.com/ptdvwYH.gif"}></img>
+                        <div>Loading...</div>
+                    </div>
+
+                    <div className='Temp Tile'>
+                        <img className="Icon" src={"https://i.imgur.com/ptdvwYH.gif"}></img>
+                        <div>Loading...</div>
+                    </div>
+                </div>
+
             </>
+            // <>
+            //     <h3>{this.props.city}</h3>
+            //     {/* Loading graphic */}
+            //     <img src="https://i.imgur.com/ptdvwYH.gif" width="100px"></img>
+            // </>
             :
             <>
                 <h3 className="City">{this.props.city.toString()}</h3>
@@ -55,37 +89,32 @@ class WeatherCard extends React.Component  {
                 {/* <div className="Sky">{this.state.weather}</div> */}
                 
                 <div className="WeatherCardRow">
-                    <div className='Sunrise'>
+                    <div className='Sunrise Tile'>
                         <img className="Icon" src={icon1}></img>
                         <div>{this.state.sunrise}</div>
                     </div>
 
-                    <div className='Sunset'>
+                    <div className='Sunset Tile'>
                         <img className="Icon" src={icon2}></img>
                         <div>{this.state.sunset}</div>
                     </div>
+                {/* </div>
 
-                    {/* <div className='Wind'>
+                <div className="WeatherCardRow"> */}
+                    <div className='Wind Tile'>
                         <img className="Icon" src={icon3}></img>
                         <div>{this.state.wind}</div>
                     </div>
 
-                    <div className='Temp'>
+                    <div className='Temp Tile'>
                         <img className="Icon" src={icon4}></img>
                         <div>{this.state.temp}</div>
+                    </div>
+{/* 
+                    <div className='Sky Tile'>
+                        <img className="Icon" src={icon4}></img>
+                        <div>{this.state.weather}</div>
                     </div> */}
-                </div>
-
-                <div className="WeatherCardRow">
-                    <div className='Wind'>
-                        <img className="Icon" src={icon3}></img>
-                        <div>{this.state.wind}</div>
-                    </div>
-
-                    <div className='Temp'>
-                        <img className="Icon" src={icon4}></img>
-                        <div>{this.state.temp}</div>
-                    </div>
                 </div>
                 
             </>
