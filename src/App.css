@@ -1,5 +1,5 @@
 body {
-  background-color:rgb(255, 255, 255);
+  background-color:#ECF3F7;
   background-image: linear-gradient(120deg, rgb(255, 255, 255) 0%, rgb(255, 250, 242) 100%);
   background-position: center;
   background-repeat: no-repeat;
@@ -18,12 +18,21 @@ h3 {
 
 .Waves {
  position: fixed;
- top: 80px;
+ top: 85px;
  left: -40px; 
  z-index: -1;
- opacity: 0.15;
- width: 90%;
+ opacity: 0.1;
+ width: 100%;
 }
+
+/* .Sun {
+  position: fixed;
+  top: 85px;
+  left: -40px; 
+  z-index: -1;
+  opacity: 0.1;
+  width: 95%;
+} */
 
 .App {
   display: flex; 
@@ -40,6 +49,7 @@ h3 {
   text-align: center;
   font-weight: 700;
   z-index: 999;
+  letter-spacing: 15px;
 }
 
 .sea, .shore {
@@ -59,6 +69,33 @@ h3 {
   margin: 30px;
   margin-top: 0;
   font-size: 40px;
+}
+
+form { 
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+input {
+  outline: none;
+  border: none;
+  font-size: 18px;
+  border-bottom: 2px solid #FB6F39;
+  height: 50px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+input[type=submit] {
+  /* background-image: linear-gradient(120deg, rgb(255, 255, 255) 0%, rgb(12, 225, 62) 100%); */
+  background-image: url('./icons/waves2.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  width: 65px;
+  
 }
 
 .WeatherCardContainer {
@@ -95,7 +132,7 @@ h3 {
 .City {
   color: rgb(255, 255, 255);
   color: #FB6F39;
-  margin: -15px -15px 0px -15px;
+  margin: -10px -15px -10px -15px;
   font-size: 23px;
   font-weight: 700;
   border-top-left-radius: 15px;
@@ -137,7 +174,7 @@ h3 {
 }  
 
 .Icon {
-  width: 70px;
+  width: 65px;
 }
 
 @keyframes fadein {

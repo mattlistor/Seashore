@@ -9,7 +9,8 @@ import icon6 from './icons/icon-06.png';
 import icon7 from './icons/icon-07.png';
 import icon8 from './icons/icon-08.png';
 
-const API_KEY = "8e520974bcb3c5c57b2b1233edd5b9db"
+// const API_KEY = "8e520974bcb3c5c57b2b1233edd5b9db"
+const API_KEY = "a6e9b836325e9e176bab11492e484b9f"
 
 class WeatherCard extends React.Component  {
 
@@ -37,6 +38,7 @@ class WeatherCard extends React.Component  {
             temp: Math.trunc(myJson.main.temp) + "° F"
         })
     })
+    console.log("API call :: fetch")
   }
   
   render(){
