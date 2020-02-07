@@ -2,6 +2,9 @@ import React from 'react';
 import WeatherCard from './WeatherCard.js';
 import logo from './logo.svg';
 import styles from './App.css';
+import waves from './icons/waves3.svg';
+
+
 
 class App extends React.Component  {
   state = {
@@ -14,9 +17,10 @@ class App extends React.Component  {
     return (
 
       <div className='App'>
-        {/* <div className="overlay"></div> */}
         <div className='SeaShore'><span className='sea'>S E A</span> <span className='shore'>S H O R E</span> </div>
-        {/* <br></br><br></br><br></br><br></br><br></br><br></br> */}
+
+        <img className="Waves" src={waves}></img>
+
         <div className='Main'>
           {/* <div className='Date'>
             {this.state.date}
@@ -24,10 +28,10 @@ class App extends React.Component  {
 
           <div className="WeatherCardContainer flex-container wrap">
             <WeatherCard city={"Sea Bright"}/>
-            {/* <WeatherCard city={"Long Branch"}/>
+            <WeatherCard city={"Long Branch"}/>
             <WeatherCard city={"Cape May"}/>
             <WeatherCard city={"Tampa"}/>
-            <WeatherCard city={"Asbury Park"}/> */}
+            <WeatherCard city={"Asbury Park"}/>
           </div>
         </div>
 

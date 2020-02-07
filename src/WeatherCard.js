@@ -98,9 +98,9 @@ class WeatherCard extends React.Component  {
                         <img className="Icon" src={icon2}></img>
                         <div>{this.state.sunset}</div>
                     </div>
-                {/* </div>
+                </div>
 
-                <div className="WeatherCardRow"> */}
+                <div className="WeatherCardRow">
                     <div className='Wind Tile'>
                         <img className="Icon" src={icon3}></img>
                         <div>{this.state.wind}</div>
