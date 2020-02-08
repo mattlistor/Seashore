@@ -5,8 +5,7 @@ import styles from './App.css';
 import waves from './icons/waves4.svg';
 import sun from './icons/sun.svg';
 
-
-
+const API_KEY = "a6e9b836325e9e176bab11492e484b9f"
 
 class App extends React.Component  {
   state = {
@@ -21,12 +20,18 @@ class App extends React.Component  {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.setState({cityList: [...this.state.cityList, this.state.city]});
+    if (this.state.city !== "") {  
+      this.setState({cityList: [...this.state.cityList, this.camelCase(this.state.city)]});
+    }
   }
   
   renderWeatherCards = () => {
     return this.state.cityList.map((city, i) => <WeatherCard key={i} city={city}/>)
   }
+
+  camelCase = (str) => { 
+    return str.toUpperCase()
+  } 
   
   render(){
     return (
@@ -49,7 +54,7 @@ class App extends React.Component  {
             value={this.state.value} 
             onChange={this.handleChange} 
             placeholder="Enter City..." />
-            <input type="submit" value="" />
+            {/* <input type="submit" value="Submit" /> */}
           </form>
 
           <div className="WeatherCardContainer flex-container wrap">

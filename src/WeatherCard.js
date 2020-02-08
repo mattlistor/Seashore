@@ -54,7 +54,7 @@ class WeatherCard extends React.Component  {
 
                 {/* <div className="Sky">{this.state.weather}</div> */}
 
-                <div className="WeatherCardRow">
+                {/* <div className="WeatherCardRow">
                     <div className='Sunrise Tile'>
                         <img className="Icon" src={"https://i.imgur.com/ptdvwYH.gif"}></img>
                         <div>Loading...</div>
@@ -76,7 +76,7 @@ class WeatherCard extends React.Component  {
                         <img className="Icon" src={"https://i.imgur.com/ptdvwYH.gif"}></img>
                         <div>Loading...</div>
                     </div>
-                </div>
+                </div> */}
 
             </>
             // <>
