@@ -1,9 +1,9 @@
 import React from 'react';
 import WeatherCard from './WeatherCard.js';
-import logo from './logo.svg';
-import styles from './App.css';
-import waves from './icons/waves4.svg';
-import sun from './icons/sun.svg';
+// import logo from './logo.svg';
+// import styles from './App.css';
+import waves from './icons/waves5.svg';
+// import sun from './icons/sun.svg';
 
 const API_KEY = "a6e9b836325e9e176bab11492e484b9f"
 
@@ -20,9 +20,12 @@ class App extends React.Component  {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (this.state.city !== "") {  
-      this.setState({cityList: [...this.state.cityList, this.camelCase(this.state.city)]});
-    }
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city},us&appid=${API_KEY}&units=imperial`)
+    .then((res) => {
+      if(res.status === 200) {
+        this.setState({cityList: [...this.state.cityList, this.camelCase(this.state.city)]})
+      }
+    })    
   }
   
   renderWeatherCards = () => {
@@ -41,13 +44,14 @@ class App extends React.Component  {
           <span className='shore'>SHORE</span> 
         </div>
 
-        <img className="Waves" src={waves}></img>
+        <img className="Waves" src={waves} alt={""}></img>
         {/* <img className="Sun" src={sun}></img> */}
 
         <div className='Main'>
-          {/* <div className='Date'>
+          
+          <div className='Date'>
             {this.state.date}
-          </div> */}
+          </div>
 
           <form onSubmit={this.handleSubmit}>
             <input type="text" 

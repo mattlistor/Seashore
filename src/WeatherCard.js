@@ -4,10 +4,10 @@ import icon1 from './icons/icon-01.png';
 import icon2 from './icons/icon-02.png';
 import icon3 from './icons/icon-03.png';
 import icon4 from './icons/icon-04.png';
-import icon5 from './icons/icon-05.png';
-import icon6 from './icons/icon-06.png';
-import icon7 from './icons/icon-07.png';
-import icon8 from './icons/icon-08.png';
+// import icon5 from './icons/icon-05.png';
+// import icon6 from './icons/icon-06.png';
+// import icon7 from './icons/icon-07.png';
+// import icon8 from './icons/icon-08.png';
 
 // const API_KEY = "8e520974bcb3c5c57b2b1233edd5b9db"
 const API_KEY = "a6e9b836325e9e176bab11492e484b9f"
@@ -92,31 +92,26 @@ class WeatherCard extends React.Component  {
                 
                 <div className="WeatherCardRow">
                     <div className='Sunrise Tile'>
-                        <img className="Icon" src={icon1}></img>
+                        <img className="Icon" src={icon1} alt={""}></img>
                         <div>{this.state.sunrise}</div>
                     </div>
 
                     <div className='Sunset Tile'>
-                        <img className="Icon" src={icon2}></img>
+                        <img className="Icon" src={icon2} alt={""}></img>
                         <div>{this.state.sunset}</div>
                     </div>
                 </div>
 
                 <div className="WeatherCardRow">
                     <div className='Wind Tile'>
-                        <img className="Icon" src={icon3}></img>
+                        <img className="Icon" src={icon3} alt={""}></img>
                         <div>{this.state.wind}</div>
                     </div>
 
                     <div className='Temp Tile'>
-                        <img className="Icon" src={icon4}></img>
+                        <img className="Icon" src={icon4} alt={""}></img>
                         <div>{this.state.temp}</div>
                     </div>
-{/* 
-                    <div className='Sky Tile'>
-                        <img className="Icon" src={icon4}></img>
-                        <div>{this.state.weather}</div>
-                    </div> */}
                 </div>
                 
             </>
