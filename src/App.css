@@ -1,7 +1,6 @@
 body {
   /* background-color:#ECF3F7; */
   /* background-color: rgb(255, 253, 232); */
-
   /* background-image: linear-gradient(120deg, rgb(255, 255, 255) 0%, rgb(255, 250, 242) 100%); */
   background-position: center;
   background-repeat: no-repeat;
@@ -26,16 +25,6 @@ h3 {
  opacity: 0.1;
  width: 100%;
 }
-
-
-/* .Sun {
-  position: fixed;
-  top: 85px;
-  left: -40px; 
-  z-index: -1;
-  opacity: 0.1;
-  width: 95%;
-} */
 
 .App {
   display: flex; 
@@ -69,9 +58,8 @@ h3 {
   justify-content: flex-start;
   align-items: flex-start;
   background-color: rgb(255, 255, 56);
-  /* background-color: #FEF200 */
   padding: 0px 50px 50px 50px;
-
+  /* background-image: url('./icons/waves2.svg'); */
 }
 
 .FirstColumn {
@@ -79,7 +67,6 @@ h3 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  /* background-color:green; */
 }
 
 .Date {
@@ -93,14 +80,12 @@ form {
   margin: 30px;
   display: flex;
   flex-flow: row;
-  /* justify-content: center; */
 }
 
 input {
   outline: none;
   border: none;
   font-size: 26px;
-  /* font-weight: 200; */
   border-bottom: 2px solid #FB6F39;
   height: 50px;
   background-color: transparent;
@@ -114,7 +99,6 @@ input:focus {
 
 input[type=submit] {
   background-image: linear-gradient(120deg, rgb(255, 255, 255) 0%, rgb(12, 225, 62) 100%);
-  /* background-image: url('./icons/waves2.svg'); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
@@ -124,33 +108,22 @@ input[type=submit] {
 
 .WeatherCardContainer {
   display: flex; 
-  /* justify-content: center; */
   margin: 10px;
-  /* width: 90%; */
-  /* width: 640px; */
-  /* padding-bottom: 10vh; */
-  /* background-color: red; */
   overflow-x: auto;
   overflow-y: auto;
-  /* height: 700px; */
-
   align-self: flex-end;
-  /* box-shadow: 0px 0px 20px rgba(109, 21, 21, 0.5) inset; */
-
 }
 
 .WeatherCard {
-  position: relative;
-  background-color: rgb(255, 239, 226);
-  background-color: white;
-  
   /* background-image: linear-gradient(120deg, rgb(255, 242, 225) 0%, rgb(255, 233, 205) 100%); */
-  padding: 15px 15px 15px 15px;
-  margin: 20px;
-  font-size:18px;
   /* border-radius: 15px; */
   /* box-shadow: 0px 0px 20px rgba(97, 50, 50, 0.1) inset;
   box-shadow: 0px 0px 20px rgba(92, 61, 61, 0.1); */
+  position: relative;
+  background-color: white;
+  padding: 15px 15px 15px 15px;
+  margin: 20px;
+  font-size:18px;
   text-align: center;
   display:flex;
   flex-direction: column;
@@ -179,23 +152,14 @@ input[type=submit] {
   letter-spacing: 1px;
 }
 
-/* .Sky {
-  background-color:rgb(255, 255, 255);
-  border-radius: 15px;
-  padding: 5px 15px 5px 15px;
-  margin-top: 20px;
-  border: 1px solid #85705F ;
-} */
-
 .Tile {
-  /* width: 130px; */
   color: rgb(89, 89, 89);
   margin: 5px;
   background-color:rgb(255, 255, 255);
   padding: 2px 20px 20px 20px;
-  /* box-shadow: 0px 0px 10px rgba(92, 61, 61, 0.1) inset; */
   border-radius: 30px;
   font-size:12px;
+  /* box-shadow: 0px 0px 10px rgba(92, 61, 61, 0.1) inset; */
 }
 
 .flex-container {
@@ -212,23 +176,18 @@ input[type=submit] {
   width: 65px;
 }
 
-/* width */
 ::-webkit-scrollbar {
-  /* display: none; */
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
@@ -238,48 +197,34 @@ input[type=submit] {
   to   { opacity: 1; transform: translatey(0px); }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 689px) {
   .SeaShore {
     flex-direction: column;
   }
 }
 
 @media screen and (max-width: 999px) {
-
   .Main {
     justify-content: center;
     align-items: center;
+    padding: 0px 0px 50px 0px;
+    margin: 50px 30px 30px 30px;
   }
   .WeatherCardContainer {
     justify-content: center;
-    /* align-items: center; */
+    width:auto;
   }
 }
+
 @media screen and (min-width: 1000px) {
   .SeaShore {
     font-size: 80px;
   }
-  .Waves {
-    width: 90vw;
-  }
-  .Main {
-    width: 90%;
-  }
 }
 
 @media screen and (min-width: 1200px) {
-  .SeaShore {
-    font-size: 80px;
-  }
-  .Waves {
-    width: 90vw;
-  }
-  .Main {
-    width: 1100px;
-  }
   .WeatherCardContainer {
     align-self: center;
-    width: 1000px;
   }
 }
 

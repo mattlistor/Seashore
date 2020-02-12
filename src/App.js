@@ -33,7 +33,7 @@ class App extends React.Component  {
   }
 
   camelCase = (str) => { 
-    return str.toUpperCase()
+    return str.toLowerCase()
   } 
   
   render(){
