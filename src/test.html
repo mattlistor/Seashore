@@ -1,0 +1,22 @@
+<style>
+    /* @media(min-width: 601px) {
+    div {
+      font-size: 80px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    div {
+      font-size: 30px;
+    }
+  } */
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  html{
+    font-size: calc(14px + (26 - 14) * ((100vw - 500px) / (700 - 500)));
+  }
+</style>
+
+<!-- font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); -->
+
+<div>Using media queries</div>
+

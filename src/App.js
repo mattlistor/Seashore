@@ -39,33 +39,39 @@ class App extends React.Component  {
   render(){
     return (
       <div className='App'>
-        <div className='SeaShore'>
-          <span className='sea'>SEA</span>
-          <span className='shore'>SHORE</span> 
-        </div>
+        <div className='Main'>
+          <div className='FirstColumn'>
+            
+            <div className='SeaShore'>
+              <span className='sea'>SEA</span>
+              <span className='shore'>SHORE</span> 
+            </div>
+          
+            <div className='Date'>
+              {this.state.date}
+            </div>
 
-        <img className="Waves" src={waves} alt={""}></img>
+            <form onSubmit={this.handleSubmit}>
+              <input type="text" 
+              value={this.state.value} 
+              onChange={this.handleChange} 
+              placeholder="Enter City..." />
+              {/* <input type="submit" value="Submit" /> */}
+            </form>
+          
+          </div>
+
+        {/* <img className="Waves" src={waves} alt={""}></img> */}
         {/* <img className="Sun" src={sun}></img> */}
 
-        <div className='Main'>
-          
-          <div className='Date'>
-            {this.state.date}
-          </div>
+        {/* <div className='Main'> */}
 
-          <form onSubmit={this.handleSubmit}>
-            <input type="text" 
-            value={this.state.value} 
-            onChange={this.handleChange} 
-            placeholder="Enter City..." />
-            {/* <input type="submit" value="Submit" /> */}
-          </form>
 
-          <div className="WeatherCardContainer flex-container wrap">
+          <div className="WeatherCardContainer wrap">
             {this.renderWeatherCards()}
           </div>
-        </div>
 
+        </div>
       </div>
     )
   }

@@ -25,6 +25,7 @@ h3 {
  width: 100%;
 }
 
+
 /* .Sun {
   position: fixed;
   top: 85px;
@@ -46,7 +47,7 @@ h3 {
   flex-direction: row;
   font-size: calc(50px + (80 - 50) * ((100vw - 300px) / (1000 - 300)));
   margin-top: 50px;
-  text-align: center;
+  text-align: left;
   font-weight: 700;
   z-index: 999;
   letter-spacing: 15px;
@@ -63,27 +64,38 @@ h3 {
   margin: 50px 10px 10px 10px;
   display: flex; 
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: yellow;
+}
+
+.FirstColumn {
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color:green;
 }
 
 .Date {
   color: rgb(89, 89, 89);
   margin: 30px;
-  margin-top: 0;
-  font-size: 40px;
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 form { 
+  margin: 30px;
   display: flex;
   flex-flow: row;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 input {
   outline: none;
   border: none;
-  font-size: 18px;
+  font-size: 26px;
+  /* font-weight: 200; */
   border-bottom: 2px solid #FB6F39;
   height: 50px;
   background-color: transparent;
@@ -103,10 +115,16 @@ input[type=submit] {
 
 .WeatherCardContainer {
   display: flex; 
-  justify-content: center;
+  /* justify-content: center; */
   margin: 10px;
-  width: 100%;
-  padding-bottom: 10vh;
+  /* width: 90%; */
+  max-width: 640px;
+  /* padding-bottom: 10vh; */
+  background-color: red;
+  overflow-x: auto;
+  align-self: flex-end;
+  /* box-shadow: 0px 0px 20px rgba(109, 21, 21, 0.5) inset; */
+
 }
 
 .WeatherCard {
@@ -180,6 +198,27 @@ input[type=submit] {
   width: 65px;
 }
 
+/* width */
+::-webkit-scrollbar {
+  display: none;
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 @keyframes fadein {
   from { opacity: 0; transform: translatey(10px); }
   to   { opacity: 1; transform: translatey(0px); }
@@ -206,6 +245,24 @@ input[type=submit] {
   }
   .Waves {
     width: 90vw;
+  }
+  .Main {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .SeaShore {
+    font-size: 80px;
+  }
+  .Waves {
+    width: 90vw;
+  }
+  .Main {
+    width: 1100px;
+  }
+  .WeatherCardContainer {
+    width: 900px;
   }
 }
 
