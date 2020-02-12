@@ -143,13 +143,33 @@ input[type=submit] {
   margin: -10px -15px -10px -15px;
   font-size: 23px;
   font-weight: 700;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
   height: 70px;
   display:flex;
   flex-direction: column;
   justify-content:  center;
   letter-spacing: 1px;
+  z-index: 1;
+}
+
+h3.City::after {
+  background: rgb(255, 255, 56);
+  /* background: red; */
+  content: " ";
+  display: block;
+  height: 5%;
+  align-self: center;
+  position: absolute;
+  top: 13.5%;
+  /* width: calc(100% + .4rem); */
+  width: 55%;
+  z-index: -1;
+  transition-duration: 0.5s;
+  
+}
+
+h3.City:hover::after {
+   height: 7%;
+   /* top: 13% */
 }
 
 .Tile {
@@ -159,6 +179,7 @@ input[type=submit] {
   padding: 2px 20px 20px 20px;
   border-radius: 30px;
   font-size:12px;
+  z-index:1;
   /* box-shadow: 0px 0px 10px rgba(92, 61, 61, 0.1) inset; */
 }
 
@@ -227,6 +248,9 @@ input[type=submit] {
     align-self: center;
   }
 }
+
+
+
 
 
 

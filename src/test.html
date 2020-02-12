@@ -1,22 +1,45 @@
 <style>
-    /* @media(min-width: 601px) {
-    div {
-      font-size: 80px;
-    }
+  body {
+    /* font-family: "Regular Patch", "Regular Bold", "Nunito Sans", -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; */
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 70px;
   }
-  
-  @media (max-width: 600px) {
-    div {
-      font-size: 30px;
-    }
-  } */
-  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
-  html{
-    font-size: calc(14px + (26 - 14) * ((100vw - 500px) / (700 - 500)));
+
+  span.container {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+  }
+
+  span.word {
+    min-width: 100px;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+
+  span.word:after {
+    background-color: #ffe359;
+    content: " ";
+    display: block;
+    height: 30%;
+    position: absolute;
+    left: 0;
+    margin-left: -1rem;
+    top: 65%;
+    width: calc(100% + 3rem);
+    z-index: -1;
   }
 </style>
 
-<!-- font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); -->
-
-<div>Using media queries</div>
-
+<html>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- <em class=""> -->
+      <span class="container">
+        <span class="word">Matthew</span>
+        <span class="word">Lloyd</span>
+        <span class="word">Listor</span>
+      </span>
+    <!-- </em> -->
+</html>
