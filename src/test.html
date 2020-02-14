@@ -1,49 +1,140 @@
 <style>
+
   body {
     display: flex;
+    flex-flow: column;
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
-    font-size: calc(10vw + 2.75rem);
-    
+    font-size: 50px; 
+    /* background: rgb(255, 234, 0); */
   }
 
   span.container {
-    /* align-self: center; */
     margin: 50px;
-    
   }
 
-  span.word {
-    min-width: 100px;
+  span.word, span.word2, span.word3 {
     position: relative;
-    z-index: 1;
-    margin: 0;
   }
 
   span.word:after {
-    background-color: #ffe359;
+    background-color: #b17cfc;
     content: " ";
-    display: block;
     height: 30%;
     position: absolute;
-    left: 0;
-    margin-left: -1rem;
+    left: -1rem;
+    /* margin-left: -1rem; */
     top: 65%;
+    width: 100%;
     width: calc(100% + 2.75rem);
     z-index: -1;
   }
+
+  span.word2:after {
+    background-color: #ffe359;
+    content: " ";
+    height: 100%;
+    position: absolute;
+    left: -1rem;
+    /* margin-left: -1rem; */
+    top: 0%;
+    width: 100%;
+    width: calc(100% + 2.75rem);
+    z-index: -1;
+  }
+
+  span.word3:after {
+    background-color: #f78a2b;
+    content: " ";
+    height: 45%;
+    position: absolute;
+    left: 0;
+    margin-left: -0.5rem;
+    top: 50%;
+    width: 100%;
+    width: calc(100% + 0.75rem);
+    z-index: -1;
+  }
+
+  div.texture, div.texture2 {
+    background-image: url("https://i.imgur.com/2HXnsAA.png");
+    background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 120%; 
+  background: black;
+    width: 10em;
+    /* height: 5em; */
+    /* background: black; */
+    position: relative;
+    margin: 40px;
+    margin-right: 70px;
+    padding: 50px;
+    color: white;
+    font-size: 5vw;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+  }
+
+  div.texture:after {
+    background-image: url("./texture.svg");
+    background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 300%; 
+    /* background: rgb(254, 214, 82); */
+    /* background-position: absolute; */
+    content: " ";
+    position: absolute;
+    left: .5rem;
+    top: .5rem;
+    width: 102%;
+    height: 102%;
+    z-index: -1;
+    /* margin: 40px;     */
+  }
+
+  div.texture2:after {
+    background-image: url("./texture3.svg");
+    background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 100%; 
+    /* background: rgb(254, 214, 82); */
+    /* background-position: absolute; */
+    content: " ";
+    position: absolute;
+    left: -1rem;
+    top: -1rem;
+    width: 102%;
+    height: 102%;
+    z-index: -1;
+    /* margin: 40px;     */
+  }
+
+
+
 </style>
 
 <html>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <!-- <em class=""> -->
-      <span class="container">
-        <span class="word">Erik</span>
-        <span class="word">and</span>
-        <span class="word">Ryan</span>
-        <span class="word">are</span>
-        <span class="word">my</span>
-        <span class="word">friends</span>
-      </span>
-    <!-- </em> -->
+
+      <!-- <span class="container">
+        <span class="word">Highlight</span>
+        <span class="word">effect</span>
+        <span class="word">CSS</span>
+        <br><br>
+        <span class="word2">Highlight</span>
+        <span class="word2">effect</span>
+        <span class="word2">CSS</span>
+        <br><br>
+        <span class="word3">Highlight</span>
+        <span class="word3">effect</span>
+        <span class="word3">CSS</span>
+      </span> -->
+
+      <div class="texture">Hello, World! This is a test quote box with a cool design.</div>
+      <div class="texture2">Hello, World! This is a test quote box with a cool design.</div>
+
 </html>
+
+
