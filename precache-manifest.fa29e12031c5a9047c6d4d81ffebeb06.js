@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "01e1f382c1d58d46d7a3a95cc0acc4b8",
+    "revision": "9804c5d21d8b60af03e1d82461d0def0",
     "url": "/Seashore/index.html"
   },
   {
-    "revision": "63ee543719e4e2c1135a",
+    "revision": "a2c7d58037a74c870f91",
     "url": "/Seashore/static/css/main.faa0ba8e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Seashore/static/js/2.ec8aa244.chunk.js.LICENSE"
   },
   {
-    "revision": "63ee543719e4e2c1135a",
-    "url": "/Seashore/static/js/main.af53d82a.chunk.js"
+    "revision": "a2c7d58037a74c870f91",
+    "url": "/Seashore/static/js/main.3dbf7236.chunk.js"
   },
   {
     "revision": "86906b56be91dcdcfd68",
