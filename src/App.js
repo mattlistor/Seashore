@@ -11,7 +11,7 @@ class App extends React.Component  {
   state = {
     city: "",
     date: new Date().toDateString(),
-    cityList: ["Sea Bright", "Asbury Park", "Long Branch"]
+    cityList: ["Sea Bright", "Asbury Park", "Barnegat"]
   }
 
   handleChange = (event) => {
