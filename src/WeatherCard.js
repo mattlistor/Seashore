@@ -23,7 +23,7 @@ class WeatherCard extends React.Component  {
     const city = this.props.city
     const country = "us"
 
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=imperial`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=imperial`)
     .then(res => res.json())
     .then((myJson) => {
         let sunrise = new Date(myJson.sys.sunrise * 1000)
