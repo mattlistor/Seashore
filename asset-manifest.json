@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/Seashore/static/css/main.faa0ba8e.chunk.css",
-    "main.js": "/Seashore/static/js/main.3dbf7236.chunk.js",
-    "main.js.map": "/Seashore/static/js/main.3dbf7236.chunk.js.map",
-    "runtime-main.js": "/Seashore/static/js/runtime-main.14b45898.js",
-    "runtime-main.js.map": "/Seashore/static/js/runtime-main.14b45898.js.map",
-    "static/js/2.ec8aa244.chunk.js": "/Seashore/static/js/2.ec8aa244.chunk.js",
-    "static/js/2.ec8aa244.chunk.js.map": "/Seashore/static/js/2.ec8aa244.chunk.js.map",
-    "index.html": "/Seashore/index.html",
-    "precache-manifest.fa29e12031c5a9047c6d4d81ffebeb06.js": "/Seashore/precache-manifest.fa29e12031c5a9047c6d4d81ffebeb06.js",
-    "service-worker.js": "/Seashore/service-worker.js",
-    "static/css/main.faa0ba8e.chunk.css.map": "/Seashore/static/css/main.faa0ba8e.chunk.css.map",
-    "static/js/2.ec8aa244.chunk.js.LICENSE": "/Seashore/static/js/2.ec8aa244.chunk.js.LICENSE",
-    "static/media/App.css": "/Seashore/static/media/Apercu Mono.66402a7c.otf",
-    "static/media/icon-01.png": "/Seashore/static/media/icon-01.3b7bf8ef.png",
-    "static/media/icon-02.png": "/Seashore/static/media/icon-02.87aeb5ee.png",
-    "static/media/icon-03.png": "/Seashore/static/media/icon-03.d416d8a9.png",
-    "static/media/icon-04.png": "/Seashore/static/media/icon-04.644ff712.png",
-    "static/media/waves5.svg": "/Seashore/static/media/waves5.7fd0579d.svg"
+    "main.css": "./static/css/main.89af69d0.chunk.css",
+    "main.js": "./static/js/main.ee18cd48.chunk.js",
+    "main.js.map": "./static/js/main.ee18cd48.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.d8ad55df.js",
+    "runtime-main.js.map": "./static/js/runtime-main.d8ad55df.js.map",
+    "static/js/2.ec8aa244.chunk.js": "./static/js/2.ec8aa244.chunk.js",
+    "static/js/2.ec8aa244.chunk.js.map": "./static/js/2.ec8aa244.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.ebd0bc3d9b8670d48425c05e78e1770c.js": "./precache-manifest.ebd0bc3d9b8670d48425c05e78e1770c.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.89af69d0.chunk.css.map": "./static/css/main.89af69d0.chunk.css.map",
+    "static/js/2.ec8aa244.chunk.js.LICENSE": "./static/js/2.ec8aa244.chunk.js.LICENSE",
+    "static/media/App.css": "./static/media/Apercu Mono.66402a7c.otf",
+    "static/media/icon-01.png": "./static/media/icon-01.3b7bf8ef.png",
+    "static/media/icon-02.png": "./static/media/icon-02.87aeb5ee.png",
+    "static/media/icon-03.png": "./static/media/icon-03.d416d8a9.png",
+    "static/media/icon-04.png": "./static/media/icon-04.644ff712.png",
+    "static/media/waves5.svg": "./static/media/waves5.7fd0579d.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.14b45898.js",
+    "static/js/runtime-main.d8ad55df.js",
     "static/js/2.ec8aa244.chunk.js",
-    "static/css/main.faa0ba8e.chunk.css",
-    "static/js/main.3dbf7236.chunk.js"
+    "static/css/main.89af69d0.chunk.css",
+    "static/js/main.ee18cd48.chunk.js"
   ]
 }
