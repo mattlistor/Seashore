@@ -20,7 +20,7 @@ class App extends React.Component  {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city},us&appid=${API_KEY}&units=imperial`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.city},us&appid=${API_KEY}&units=imperial`)
     .then((res) => {
       if(res.status === 200) {
         this.setState({cityList: [...this.state.cityList, this.camelCase(this.state.city)]})
