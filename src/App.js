@@ -56,7 +56,7 @@ class App extends React.Component  {
               value={this.state.value} 
               onChange={this.handleChange} 
               placeholder="Enter City..." />
-              {/* <input type="submit" value="Submit" /> */}
+              <input type="submit" value="⭢" />
             </form>
           
           </div>
